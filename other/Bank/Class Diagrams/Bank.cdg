@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Bank">
+  <ClassDiagramComponents>
+    <Class name="Customer" package="domain" visibility="public" xPosition="13.0" yPosition="33.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="cardNumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="surname"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phone"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="adress"/>
+        </Method>
+        <Method name="getCardNumber" returnType="int" visibility="public"/>
+        <Method name="setCardNumber" returnType="void" visibility="public">
+          <Argument type="int" name="cardNumber"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Bank" package="domain" visibility="public" xPosition="489.0" yPosition="33.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="idBank" type="int" visibility="private"/>
+        <Field name="accounts" type="List&lt;Account&gt;" visibility="private"/>
+        <Field name="bankEmployee" type="List&lt;BankEmployee&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BankEmployee" package="domain" visibility="public" xPosition="660.0" yPosition="275.0">
+      <Fields>
+        <Field name="idBankEmployee" type="int" visibility="private"/>
+        <Field name="nameEmployee" type="String" visibility="private"/>
+        <Field name="position" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameEmployee"/>
+          <Argument type="String" name="addressEmployee"/>
+          <Argument type="String" name="position"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNameEmployee" returnType="String" visibility="public"/>
+        <Method name="setNameEmployee" returnType="void" visibility="public">
+          <Argument type="String" name="Employee"/>
+        </Method>
+        <Method name="getPosition" returnType="String" visibility="public"/>
+        <Method name="setPosition" returnType="void" visibility="public">
+          <Argument type="String" name="position"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Account" package="domain" visibility="public" xPosition="279.0" yPosition="421.0">
+      <Fields>
+        <Field name="number" type="int" visibility="private"/>
+        <Field name="balance" type="int" visibility="private"/>
+        <Field name="deposite" type="float" visibility="private"/>
+        <Field name="withdraw" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setDeposite" returnType="void" visibility="public">
+          <Argument type="float" name="deposite"/>
+        </Method>
+        <Method name="setWithdraw" returnType="void" visibility="public">
+          <Argument type="float" name="withdraw"/>
+        </Method>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="getBalance" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BankTest" package="test" visibility="public" xPosition="660.0" yPosition="554.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Account" source="domain.Customer" target="domain.Account" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Accounts" source="domain.Bank" target="domain.Account" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <HasRelation name="Bank Employee" source="domain.Bank" target="domain.BankEmployee" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

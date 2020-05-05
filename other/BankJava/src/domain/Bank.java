@@ -21,4 +21,12 @@ public class Bank {
     public String getName() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    public BankEmployee addBankEmployee(BankEmployee bankEmployee) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public BankEmployee removeBankEmployee(BankEmployee bankEmployee) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

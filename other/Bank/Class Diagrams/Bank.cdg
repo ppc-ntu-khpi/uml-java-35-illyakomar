@@ -33,7 +33,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Bank" package="domain" visibility="public" xPosition="489.0" yPosition="33.0">
+    <Class name="Bank" package="domain" visibility="public" xPosition="473.0" yPosition="33.0">
       <Fields>
         <Field name="name" type="String" visibility="private"/>
         <Field name="address" type="String" visibility="private"/>
@@ -45,9 +45,15 @@
       <Methods>
         <Method name="getAddress" returnType="String" visibility="public"/>
         <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="addBankEmployee" returnType="BankEmployee" visibility="public">
+          <Argument type="BankEmployee" name="bankEmployee"/>
+        </Method>
+        <Method name="removeBankEmployee" returnType="BankEmployee" visibility="public">
+          <Argument type="BankEmployee" name="bankEmployee"/>
+        </Method>
       </Methods>
     </Class>
-    <Class name="BankEmployee" package="domain" visibility="public" xPosition="660.0" yPosition="275.0">
+    <Class name="BankEmployee" package="domain" visibility="public" xPosition="585.0" yPosition="344.0">
       <Fields>
         <Field name="idBankEmployee" type="int" visibility="private"/>
         <Field name="nameEmployee" type="String" visibility="private"/>
@@ -90,7 +96,7 @@
         <Method name="getBalance" returnType="int" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="BankTest" package="test" visibility="public" xPosition="660.0" yPosition="554.0">
+    <Class name="BankTest" package="test" visibility="public" xPosition="743.0" yPosition="598.0">
       <Fields/>
       <Constructors/>
       <Methods>
